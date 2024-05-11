@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solace</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="shortcut icon" href="image/lovie.jpg"/>
+    <style>
+        body {
+            background-color: #FFF6DD;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between; /* Space the containers evenly */
+            height: calc(100vh - 50px); /* Adjust row height to fit navigation bar */
+        }
+
+        .container {
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: white;
+            height: 100%; /* Set container height to 100% of parent (row) height */
+        }
+
+        .container:nth-child(1) {
+            background-color: #FF6F61; /* First container color */
+            flex-basis: 15%;
+        }
+
+        .container:nth-child(2) {
+            background-color: #FEFDED; /* Second container color */
+            flex-basis: 50%;
+            position: relative; /* Add position relative to create stacking context */
+        }
+
+        .container:nth-child(3) {
+            background-color: #88B04B; /* Third container color */
+            flex-basis: 20%;
+        }
+
+        /* Styles for the navigation bar (app bar) */
+        nav {
+            background-color: #FEFDED; /* Set the background color */
+            height: 50px; /* Set the height of the navigation bar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid #CCC4C4; /* Add border line at the bottom */
+        }
+
+        #container2 .post {
+            width: 250px; /* Width of the rectangle */
+            height: 75px; /* Height of the rectangle */
+            background-color: #FEFDED; /* Color of the rectangle */
+            position: absolute; /* Position absolute to position the shape inside container 2 */
+            top: 5%; /* Position at the top of container2 */
+            left: 50%; /* Position the shape horizontally centered */
+            transform: translateX(-50%); /* Center the shape horizontally */
+            border-radius: 20px; /* Make the edges of the rectangle circular */
+            border: 0.2px solid #000;
+            z-index: 1; /* Ensure the post div is above the image */
+        }
+
+        #container2 .post-image {
+            position: absolute;
+            top: 50%; /* Position the image vertically centered */
+            left: 50%; /* Position the image horizontally centered */
+            transform: translate(-50%, -50%); /* Center the image both vertically and horizontally */
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- Add your navigation links or other content here -->
+        Navigation Links
+    </nav>
+    <div class="row">
+        <div class="container">Container 1</div>
+        <div class="container" id="container2">
+            <div class="post">
+                <img class="post-image" src="https://contents.pep.ph/images2/images2/2024/03/14/colet-1710383966.jpg" alt="Lovie">
+            </div>
+        </div>
+        <div class="container">Container 3</div>
+    </div>
+</body>
+</html>
